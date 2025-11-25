@@ -50,10 +50,10 @@ const CommentArea = function (props) {
         <>
 
             <Row >
-                <Col xs={12} className="d-flex flex-wrap align-content-center justify-content-center" style={{ height: "90px" }}>
+                <Col xs={12} className="d-flex flex-wrap align-content-center justify-content-center" style={{ height: "110px" }}>
                     <h5 className="text-info">Recensioni</h5>
                 </Col>
-                <Col xs={12}>
+                <Col xs={12} >
                     {
                         loading ? (
                             <div className="text-center">
@@ -68,7 +68,8 @@ const CommentArea = function (props) {
 
 
                 </Col>
-                <Col xs={12}>
+                <Col xs={12} className="border-top border-info mt-3">
+                    <h5 className="text-info mt-2 text-center">Lascia un commento.</h5>
                     <AddComment elementId={props.elementId} />
                 </Col>
             </Row >

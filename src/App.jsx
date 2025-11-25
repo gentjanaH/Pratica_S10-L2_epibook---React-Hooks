@@ -15,7 +15,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const App = function () {
 
-  const [selectedBook, setselectedBook] = useState("null")
+  const [selectedBook, setselectedBook] = useState(null)
 
   const handleBookSelect = (book) => {
     setselectedBook(book)
@@ -39,9 +39,12 @@ const App = function () {
           </Col>
           <Col xs={6} lg={4} >
             {selectedBook ? (
+
+
               <CommentArea
                 elementId={selectedBook.asin}
                 bookTitle={selectedBook.title} />
+
             ) : (
               <div className="d-flex flex-wrap align-content-center justify-content-center" style={{ height: "90px" }} >
                 <p className="text-info text-center my-2">Seleziona un libro per leggere i commenti.</p>
